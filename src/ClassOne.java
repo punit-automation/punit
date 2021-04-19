@@ -26,12 +26,15 @@ public class ClassOne {
 				.statusCode(200).extract().response().asString();// here equal to validating the response with app
 
 		System.out.println(output);
-		// to show results in console declared it as a String and reference variable
-		// output
-
-//	Q-How to Extract  something from Json response , here we have extracted place id value from response and shown to results.
-		// With using Jsonpath from
-
+	
+		/*
+		 * to show results in console declared it as a String and reference variable
+		 * output
+		 * 
+		 * Q-How to Extract something from Json response , here we have extracted place
+		 * id value from response and shown to results. With using Jsonpath from
+		 */
+		
 		JsonPath js = new JsonPath(output);
 
 		String placeId = js.getString("place_id");
